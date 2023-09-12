@@ -1,0 +1,67 @@
+body {
+    background-color: #1e1e20;
+}
+
+.wrapper {
+    padding: 50px;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    background: #1e1e20;
+    justify-content: center;
+    background-size: cover;
+}
+
+.block {
+    background-image: linear-gradient(90deg, #e48a15, #d61bae);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+
+}
+
+
+/* ========================================================= */
+
+.block {
+    animation: move-block 30s .3s infinite normal;
+
+    /* animation-name: ; */
+    /* animation-duration: ; */
+    /* animation-iteration-count: infinite; */
+    /*animation-direction: normal;*/
+    /* animation-delay: ; */
+    /* animation-fill-mode: forwards; */
+    animation-timing-function: linear;
+}
+
+@keyframes move-block {
+    0% {
+        top: 0;
+        left: 0;
+        transform: translate(0) translateY(0);
+    }
+    25% {
+        top: 0;
+        left: 100%;
+        transform: translateX(-100%) translateY(0);
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+        transform: translateX(-100%) translateY(-100%);
+    }
+    75% {
+        top: 100%;
+        left: 0;
+        transform: translateX(0) translateY(-100%);
+    }
+    100% {
+        top: 0;
+        left: 0;
+        transform: translateX(0) translateY(0);
+    }
+}
